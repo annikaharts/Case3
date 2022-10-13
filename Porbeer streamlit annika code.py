@@ -1,3 +1,11 @@
+# !pip install streamlit
+import streamlit as st
+import pandas as pd
+import calendar
+from datetime import timedelta
+import plotly.express as px
+import plotly.graph_objects as go
+
 st.subheader('Laadpaaldata') 
 st.text("Om de date op te schonen en overzichtelijk te maken hebben we de volgende bewerkingen uitgevoerd:")
 st.text("Allereerst hebben we alle NA-waardes verwijderd.")
@@ -7,14 +15,6 @@ st.text("hierbij waren er 5 erg afwijkend, dus hebben we deze verwijderd.")
 st.text("Hevige 'uitschieters' hebben we verwijderd om de meest voorkomende oplaadtijden te kunnen plotten voor een beter overzicht")
 st.text("De gemiddelde en mediaan zijn berekend om te implementeren in de volgende figuren.")
 st.text("")
-
-# !pip install streamlit
-import streamlit as st
-import pandas as pd
-import calendar
-from datetime import timedelta
-import plotly.express as px
-import plotly.graph_objects as go
 
 laadpaaldata = pd.read_csv('laadpaaldata.csv')
 print(laadpaaldata.isna().sum().sum()) # Geen NaN waardes te vinden in deze dataset
