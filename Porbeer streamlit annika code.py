@@ -7,6 +7,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 st.subheader('Laadpaaldata') 
+st.subheader('Laadpaaldata_YEEEEEEEEEEEEEEEEEEEEEEET') 
 st.text("Om de date op te schonen en overzichtelijk te maken hebben we de volgende bewerkingen uitgevoerd:")
 st.text("Allereerst hebben we alle NA-waardes verwijderd.")
 st.text("Vervolgens hebben we alle datums omgezet naar datetime format.")
